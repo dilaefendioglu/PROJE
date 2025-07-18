@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head> 
         <meta charset="utf8">
@@ -5,5 +6,35 @@
     </head>
     <body>  <!--görülücek seyler sayfada-->
         
+
+    <form action=""  method="get">
+
+    <label for="kadi"> KULLANICI ADI</label>
+       <input required placeholder="kullanici adini giriniz" id="kadi" type="text" > <br>     <!--reguired:o alanın doldurulması gerektiğini belirtir.-->
+    <label for="sifre"> ŞİFRE </label>
+       <input required placeholder="sifrenizi girin" id="sifre" type="password"> <br>
+    <label for="email"> E-MAIL</label>
+       <input required  placeholder="e-mail giriniz" id="email" type="email" > <br>
+    <label for="dosya"> dosya seç</label>
+       <input id="dosya" type="file"> <br>
+   <label > <input required type="checkbox"> sözleşmeyi okudum,onaylyorum </label> <br>   <!-- checkbox birden fazla secenek hakkı sunar-->
+   <Label>
+       <input type="radio" name="cinsiyet" value="erkek"> ERKEK
+   </Label> 
+   <Label>
+       <input type="radio" name="cinsiyet" value="kadin"> KADIN  <!--radio tek secenek hakkı sunar-->
+   </Label> <br>
+   <input type="submit" value="FORMU GÖNDER"> 
+   <input type="reset" value="SIFIRLA">
+  
+
+
+    
+
+    </form>
+
+
+
+
     </body>
 </html>
