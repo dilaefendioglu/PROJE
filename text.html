@@ -8,33 +8,55 @@
         
 
     <form action=""  method="get">
+        <fieldset>
+            <legend>İBB BURS KAYIT</legend>
 
     <label for="kadi"> KULLANICI ADI</label>
-       <input required placeholder="kullanici adini giriniz" id="kadi" type="text" > <br>     <!--reguired:o alanın doldurulması gerektiğini belirtir.-->
+       <input name="ad"   required placeholder="kullanici adini giriniz" id="kadi" type="text" > <br>    <!--reguired:o alanın doldurulması gerektiğini belirtir.-->
+
     <label for="sifre"> ŞİFRE </label>
-       <input required placeholder="sifrenizi girin" id="sifre" type="password"> <br>
+       <input name="sifre" placeholder="sifrenizi girin" id="sifre" type="password"> <br>
+       
     <label for="email"> E-MAIL</label>
-       <input required  placeholder="e-mail giriniz" id="email" type="email" > <br>
-    <label for="dosya"> dosya seç</label>
-       <input id="dosya" type="file"> <br>
-   <label > <input required type="checkbox"> sözleşmeyi okudum,onaylyorum </label> <br>   <!-- checkbox birden fazla secenek hakkı sunar-->
-   <Label>
+       <input name ="e-posta"  placeholder="e-mail giriniz" id="email" type="email" > <br>
+
+    <label for="cinsiyet">CİNSİYET</label>
        <input type="radio" name="cinsiyet" value="erkek"> ERKEK
-   </Label> 
-   <Label>
-       <input type="radio" name="cinsiyet" value="kadin"> KADIN  <!--radio tek secenek hakkı sunar-->
-   </Label> <br>
-   <input type="submit" value="FORMU GÖNDER"> 
-   <input type="reset" value="SIFIRLA">
-  
+       <input type="radio" name="cinsiyet" value="kadin"> KADIN  <br> <!--radio tek secenek hakkı sunar-->
 
+    <label for="ay"> BİLDİĞİNİZ DİLLER </label>
+       <input id="ay" list="diller" name="diller">   <!--arama yerinde gosterilmesi icin sectiklerimizin name almaları gerrekiyor hepsinin name olması lazım-->
+          <datalist id="diller">
+            <option value="HTML">                   <!--optionlar kapanmıyor selcetle yaparsak kapanıcak-->
+            <option value="CSS">
+            <option value="JAVA"> 
+         </datalist> <br>
 
-    
+    <label for="dosya"> ÖĞRENCİ BELGESİ</label>
+      <input name="belge" id="dosya" type="file"> <br>
+
+   <label for="ysec">YAKANIZI SEÇİNİZ</label> <br>
+     <select id="ysec" name="yaka" multiple size="6" >
+<optgroup label="AVRUPA YAKASI" >
+        <option value="BESİKTAŞ">BEŞİKTAŞ</option>
+        <option value="BEYOĞLU">BEYOĞLU</option>
+        <option value="BAHÇELİEVLER">BAHÇELİEVLER</option>
+</optgroup>
+<optgroup label="ANADOLU YAKASI" >
+       <option value="MALTEPE">MALTEPE</option>
+       <option value="KADİKÖY">KADIKÖY</option>
+       <option value="ÜSKÜDAR">ÜSKÜDAR</option>
+</optgroup>
+</select> <br>
+
+   <label > <input name="sözlesme" type="checkbox"> sözleşmeyi okudum,onaylyorum </label> <br>   <!-- checkbox birden fazla secenek hakkı sunar-->
+
+ <button type="submit" style="width: 120px; height: 40px;">GÖNDER</button>
+ <button type="reset" style="width: 120px; height: 40px;">SIFIRLA</button>
+
+   </fieldset>
 
     </form>
-
-
-
 
     </body>
 </html>
